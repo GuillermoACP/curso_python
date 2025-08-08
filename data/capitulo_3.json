@@ -1,0 +1,8 @@
+[
+    {
+        "slug": "programacion orientada a objetos",
+        "titulo": "Programación Orientada a Objetos (POO)",
+        "contenido": "La POO es un paradigma de programación que utiliza 'objetos' para representar datos y comportamientos. En Python, puedes definir clases y crear instancias para organizar tu código de manera modular.",
+        "exercise": null
+    }
+]

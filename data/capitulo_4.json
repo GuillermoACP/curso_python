@@ -1,0 +1,11 @@
+[
+    {
+        "slug": "bucles for",
+        "titulo": "Bucles For en Python",
+        "contenido": "Los bucles for en Python se utilizan para iterar sobre una secuencia (como una lista o un rango). Permiten ejecutar un bloque de código varias veces, una por cada elemento de la secuencia. Por ejemplo, puedes usar un bucle for para imprimir cada elemento de una lista.",
+        "exercise": {
+            "description": "Crea un bucle for que imprima los números del 1 al 10.",
+            "initial_code": "for i in range(1, 11):\n    print(i)"
+        }
+    }
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Python Curso{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Python Curso</h1>
+    </header>
+    <main>
+        <aside>
+            <nav>
+                {% block sidebar %}{% endblock %}
+            </nav>
+        </aside>
+        <section id="content">
+            {% block content %}{% endblock %}
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

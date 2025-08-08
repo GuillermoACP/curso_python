@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Lección: {{ leccion['titulo'] }}{% endblock %}
+
+{% block sidebar %}
+<ul>
+    {% for lec in lecciones %}
+        <li class="{% if lec['slug'] == leccion['slug'] %}active{% endif %}">
+            <a href="{{ url_for('leccion', slug=lec['slug']) }}">
+                {{ lec['titulo'] }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block content %}
+<h1>{{ leccion['titulo'] }}</h1>
+<div>
+    {{ leccion['contenido'] | safe }}
+
+    {% if leccion.exercise %}
+        <h2>Ejercicio</h2>
+        <p>{{ leccion.exercise.description }}</p>
+        <label for="code-display">Código:</label>
+        <textarea id="code-display" rows="8" style="width:100%;">{{ leccion.exercise.initial_code }}</textarea>
+        <button onclick="runCode()">Ejecutar código</button>
+        <div>
+            <strong>Resultado:</strong>
+            <pre id="output"></pre>
+        </div>
+        <pre>{{ leccion.exercise.solution }}</pre>
+    {% endif %}
+</div>
+<a href="{{ url_for('index') }}">Volver a la lista</a>
+{% endblock %}
