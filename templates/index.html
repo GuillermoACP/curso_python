@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{% block title %}Lecciones de Python{% endblock %}</title>
-</head>
-<body>
-    {% block sidebar %}
-    <!-- Puedes dejar vacío o mostrar algo si lo deseas -->
-    {% endblock %}
+{% extends "base.html" %}
 
-    {% block content %}
-    <h1>Lista de Lecciones</h1>
-    <ul>
-        {% for leccion in lecciones %}
-            <li>
-                <a href="{{ url_for('leccion', slug=leccion['slug']) }}">
-                    {{ leccion['titulo'] }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-    {% endblock %}
-</body>
-</html>
+{% block title %}Bienvenido al Curso de Python{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido al Curso de Python</h1>
+    <p>Selecciona un tema en el menú lateral o haz clic en <strong>Curso</strong> en el menú superior para comenzar con la primera lección.</p>
+{% endblock %}

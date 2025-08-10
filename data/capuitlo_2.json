@@ -1,7 +1,32 @@
 [
     {
-        "slug": "estructuras de datos",
+        "slug": "estructuras-de-datos",
         "titulo": "Estructuras de Datos en Python",
-        "contenido": "Python ofrece varias estructuras de datos integradas como listas, tuplas, conjuntos y diccionarios. Estas estructuras permiten almacenar y manipular datos de manera eficiente."
+        "lessons": [
+            {
+                "titulo": "Listas",
+                "contenido": "Las listas son colecciones ordenadas y mutables de elementos.",
+                "example": {
+                    "description": "Crea una lista de tus frutas favoritas.",
+                    "initial_code": "frutas = ['manzana', 'banana', 'naranja']\nprint(frutas)"
+                }
+            },
+            {
+                "titulo": "Tuplas",
+                "contenido": "Las tuplas son colecciones ordenadas e inmutables de elementos.",
+                "example": {
+                    "description": "Crea una tupla con tres colores.",
+                    "initial_code": "colores = ('rojo', 'verde', 'azul')\nprint(colores)"
+                }
+            },
+            {
+                "titulo": "Diccionarios",
+                "contenido": "Los diccionarios son colecciones no ordenadas de pares clave-valor.",
+                "example": {
+                    "description": "Crea un diccionario con el nombre y la edad de una persona.",
+                    "initial_code": "persona = {'nombre': 'Ana', 'edad': 30}\nprint(persona)"
+                }
+            }
+        ]
     }
 ]

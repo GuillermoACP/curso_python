@@ -1,7 +1,144 @@
-[
+{
+  "id": 0,
+  "slug": "variables-y-tipos-de-datos",
+  "titulo": "Variables y tipos de datos",
+  "descripcion": "En este capítulo aprenderá sobre los diferentes tipos de datos con los que puede trabajar en sus programas Python. También aprenderá a utilizar variables para representar datos en sus programas.",
+  "link_doc": "https://docs.python.org/es/3/tutorial/introduction.html",
+  "lessons": [
+    {
+      "id": 0,
+      "titulo": "Qué sucede realmente cuando ejecutas hello_world.py",
+      "pasos": [
         {
-        "slug": "introduccion a python",
-        "titulo": "Introducción a Python",
-        "contenido": "Python es un lenguaje de programación versátil y fácil de aprender. Es utilizado en desarrollo web, análisis de datos, inteligencia artificial, y más."
+          "contenido": "Echemos un vistazo más de cerca a lo que hace Python cuando ejecuta <code>hello_world.py</code>. Resulta que Python hace bastante trabajo, incluso cuando ejecuta un programa simple:",
+          "display_code": "print('Hola, mundo')"
+        },
+        {
+          "contenido": "Cuando ejecute este código, debería ver el siguiente resultado:",
+          "display_output": "Hola, mundo"
+        },
+        {
+          "contenido": "Cuando ejecuta el archivo <code>hello_world.py</code>, la terminación <strong>.py</strong> indica que el archivo es un programa Python. Luego, su editor ejecuta el archivo a través del <strong>intérprete de Python</strong>, que lee el programa y determina qué significa cada palabra en el programa. Por ejemplo, cuando el intérprete ve la palabra <code>print</code> seguida de paréntesis, imprime en la pantalla lo que esté dentro de los paréntesis."
+        },
+        {
+          "contenido": "Mientras escribe sus programas, su editor resalta diferentes partes de su programa de diferentes maneras. Por ejemplo, reconoce que <code>print()</code> es el nombre de una función y muestra esa palabra en un color. Reconoce que <code>'¡Hola mundo Python!'</code> no es código Python y muestra esa frase en un color diferente. Esta característica se llama <strong>resaltado de sintaxis</strong>."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "titulo": "Uso de variables en Python",
+      "pasos": [
+        {
+          "contenido": "Intentemos usar una variable en <code>hello_world.py</code>. Agregue una nueva línea al comienzo del archivo y modifique la segunda línea:",
+          "display_code": "mensaje = \"¡Hola mundo Python!\"\nprint(mensaje)"
+        },
+        {
+          "contenido": "Ejecute este programa para ver qué sucede. Debería ver el mismo resultado que anteriormente:",
+          "display_output": "¡Hola mundo Python!"
+        },
+        {
+          "contenido": "Hemos agregado una variable llamada <code>mensaje</code>. Cada variable está conectada a un <strong>valor</strong>, que es la información asociada con esa variable. En este caso, el valor es el texto <code>\"¡Hola mundo Python!\"</code>."
+        },
+        {
+          "contenido": "Agregar una variable hace un poco más de trabajo para el <strong>intérprete de Python</strong>. Cuando procesa la primera línea, asocia la variable <code>mensaje</code> con el texto <code>\"¡Hola mundo Python!\"</code>. Cuando llega a la segunda línea, imprime el valor asociado con <code>mensaje</code> en la pantalla."
+        },
+        {
+          "contenido": "Ampliemos este programa para imprimir un segundo mensaje. Modifique <code>hello_world.py</code> agregando una línea en blanco y dos nuevas líneas de código:",
+          "display_code": "mensaje = \"¡Hola mundo Python!\"\nprint(mensaje)\n\nmensaje = \"¡Hola mundo del curso intensivo de Python!\"\nprint(mensaje)"
+        },
+        {
+          "contenido": "Ahora, al ejecutar <code>hello_world.py</code>, debería ver dos líneas de salida:",
+          "display_output": "¡Hola mundo Python!\n¡Hola mundo del curso intensivo de Python!"
+        },
+        {
+          "contenido": "Puede cambiar el valor de una variable en cualquier momento y Python siempre mantendrá el <strong>valor actual</strong> asociado a ella."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Nombrar y usar variables",
+      "pasos": [
+        {
+          "contenido": "Cuando utiliza variables en Python, debe cumplir con algunas reglas y pautas. Romper algunas de estas reglas provocará errores; otras pautas simplemente lo ayudan a escribir código que sea más fácil de leer y comprender. Asegúrese de tener en cuenta las siguientes reglas cuando trabaje con variables:"
+        },
+        {
+          "contenido": "<ul><li>Los nombres de variables sólo pueden contener letras, números y guiones bajos. Pueden empezar con una letra o un guión bajo, pero no con un número. Por ejemplo, puede llamar a una variable <code>mensaje_1</code> pero no a <code>1_mensaje</code>.</li><li>No se permiten espacios en los nombres de las variables, pero se pueden utilizar guiones bajos para separar palabras en nombres de variables. Por ejemplo, <code>mensaje_saludo</code> funciona pero <code>mensaje de saludo</code> provocará errores.</li><li>Evite el uso de palabras clave de Python y nombres de funciones como nombres de variables. Por ejemplo, no utilice la palabra <code>print</code> como nombre de variable; Python lo ha reservado para un propósito programático particular.</li><li>Los nombres de las variables deben ser breves pero descriptivos. Por ejemplo, <code>nombre</code> es mejor que <code>n</code>, <code>nombre_estudiante</code> es mejor que <code>s_n</code> y <code>longitud_nombre</code> es mejor que <code>longitud_nombre_personas</code>.</li><li>Tenga cuidado al utilizar la letra minúscula <code>l</code> y la letra mayúscula <code>O</code> porque podrían confundirse con los números <code>1</code> y <code>0</code>.</li></ul>"
+        },
+        {
+          "contenido": "Puede requerir algo de práctica aprender a crear buenos nombres de variables, especialmente a medida que sus programas se vuelven más interesantes y complicados. A medida que escriba más programas y empiece a leer el código de otras personas, mejorará a la hora de encontrar nombres significativos."
+        },
+        {
+          "notas": "Las variables de Python que está utilizando en este momento deben estar en minúsculas. No obtendrá errores si usa letras mayúsculas, pero las letras mayúsculas en los nombres de variables tienen significados especiales que analizaremos en capítulos posteriores."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Evitar errores de nombre al utilizar variables",
+      "pasos": [
+        {
+          "contenido": "Todo programador comete errores y la mayoría comete errores todos los días. Aunque los buenos programadores pueden cometer errores, también saben cómo responder a esos errores de manera eficiente. Veamos un error que probablemente cometa desde el principio y aprendamos cómo solucionarlo."
+        },
+        {
+          "contenido": "Escribiremos un código que genere un error a propósito. Ingrese el siguiente código, incluido el mensaje de la palabra mal escrita, que se muestra en <strong>negrita</strong>:",
+          "display_code": "mensaje = \"¡Hola lector del curso intensivo de Python!\"\nprint(mensajes)"
+        },
+        {
+          "contenido": "Cuando ocurre un error en su programa, el intérprete de Python hace todo lo posible para ayudarlo a descubrir dónde está el problema. El intérprete proporciona un rastreo cuando un programa no se puede ejecutar correctamente. Un rastreo es un registro de dónde tuvo problemas el intérprete al intentar ejecutar su código."
+        },
+        {
+          "contenido": "A continuación se muestra un ejemplo del rastreo que proporciona Python después de haber escrito mal accidentalmente el nombre de una variable:",
+          "display_code": "Traceback (most recent call last):\n  File \"hello_world.py\", line 2, in <module>\n    print(mensaje)\nNameError: name 'mensaje' is not defined. Did you mean: 'mensajes'?"
+        },
+        {
+          "contenido": "El resultado informa que se produce un error en la línea 2 del archivo <code>hello_world.py</code>. El intérprete muestra esta línea para ayudarnos a detectar el error rápidamente y nos dice qué tipo de error encontró. En este caso encontró un <strong>error de nombre</strong> e informa que la variable que se está imprimiendo, <code>mensaje</code>, no ha sido definida."
+        },
+        {
+          "contenido": "Python no puede identificar el nombre de la variable proporcionada. Un error de nombre generalmente significa que olvidamos establecer el valor de una variable antes de usarla o que cometimos un error ortográfico al ingresar el nombre de la variable. Si Python encuentra un nombre de variable similar al que no reconoce, le preguntará si ese es el nombre que deseaba utilizar."
+        },
+        {
+          "contenido": "En este ejemplo omitimos la letra <code>s</code> en el nombre de la variable en la segunda línea. El intérprete de Python no revisa la ortografía de su código, pero sí garantiza que los nombres de las variables estén escritos de manera consistente. Por ejemplo, observe lo que sucede cuando escribimos correctamente <code>mensaje</code> en la línea que define la variable:",
+          "display_code": "mensaje = \"¡Hola lector del curso intensivo de Python!\"\nprint(mensaje)"
+        },
+        {
+          "contenido": "En este caso, ¡el programa se ejecuta correctamente!\n\n<strong>Salida esperada:</strong>\n¡Hola, lector del curso intensivo de Python!"
+        },
+        {
+          "contenido": "Los nombres de las variables coinciden, por lo que Python no ve ningún problema. Los lenguajes de programación son estrictos, pero ignoran la buena y la mala ortografía. Como resultado, no necesita considerar las reglas ortográficas y gramaticales del inglés cuando intenta crear nombres de variables y escribir código."
+        },
+        {
+          "contenido": "Muchos errores de programación son simples errores tipográficos de un solo carácter en una línea de un programa. Si pasa mucho tiempo buscando uno de estos errores, sepa que está en buena compañía. Muchos programadores experimentados y talentosos pasan horas buscando este tipo de pequeños errores. Intente reírse de ello y siga adelante, sabiendo que sucederá con frecuencia a lo largo de su vida como programador."
+        },
+        {
+          "contenido": "Las variables son etiquetas. A menudo se describen como cuadros en los que puede almacenar valores. Esta idea puede ser útil las primeras veces que usa una variable, pero no es una forma precisa de describir cómo se representan las variables internamente en Python. Es mucho mejor pensar en las variables como etiquetas que puedes asignar a valores. También se puede decir que una variable hace referencia a un determinado valor."
+        },
+        {
+          "contenido": "Esta distinción probablemente no importará mucho en sus programas iniciales, pero vale la pena aprenderlo más temprano que tarde. En algún momento, verá un comportamiento inesperado de una variable y una comprensión precisa de cómo funcionan las variables le ayudará a identificar lo que sucede en su código."
+        },
+        {
+          "notas": " La mejor manera de comprender nuevos conceptos de programación es intentar usarlos en sus programas. Si te quedas atascado mientras trabajas en un ejercicio de este libro, intenta hacer otra cosa por un tiempo. Si todavía estás atascado, revisa la parte relevante de ese capítulo. Si aún necesita ayuda, consulte las sugerencias en el Apéndice C."
+        },
+        {
+          "contenido": "Debido a que la mayoría de los programas definen y recopilan algún tipo de datos y luego hacen algo útil con ellos, es útil clasificar diferentes tipos de datos. El primer tipo de datos que veremos es la cadena. Las cadenas son bastante simples a primera vista, pero puedes usarlas de muchas maneras diferentes."
+        },
+        {
+          "contenido": "Una cadena es una serie de caracteres. Todo lo que esté entre comillas se considera una cadena en Python, y puedes usar comillas simples o dobles alrededor de tus cadenas de esta manera:"
+        },
+        {
+          "display_code": "\"Esto es una cadena\"\n\"Esto también es una cadena\""
+        },
+        {
+          "contenido": "Esta flexibilidad le permite utilizar comillas y apóstrofes dentro de sus cadenas:"
+        },
+        {
+          "display_code": "'Le dije a mi amigo: \"¡Python es mi lenguaje favorito!\"'\n\"El lenguaje 'Python' lleva el nombre de Monty Python, no de la serpiente\"\n\"Una de las fortalezas de Python es su comunidad diversa y solidaria\""
+        },
+        {
+          "contenido": "Exploremos algunas de las formas en que puede usar cadenas."
+        }
+      ]
     }
-]
+  ]
+}
